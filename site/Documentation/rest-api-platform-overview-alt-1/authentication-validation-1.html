@@ -1,0 +1,560 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../rest-api-platform-overview-alt-1.html">
+      
+      
+        <link rel="next" href="getting-updates-on-your-submissions-booked-accounts.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>Authentication - Linear 1.0 API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#securing-api-endpoints-using-client-certificates" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Linear 1.0 API" class="md-header__button md-logo" aria-label="Linear 1.0 API" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Linear 1.0 API
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Authentication
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Linear 1.0 API" class="md-nav__button md-logo" aria-label="Linear 1.0 API" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Linear 1.0 API
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documenataion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Documenataion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-startedd.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rest-api-platform-overview-alt-1.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST API Platform Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="authentication-validation-1.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-creating-a-certificate-authority-ca-cert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Creating a Certificate Authority (CA) Cert
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-packaging-the-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Packaging the Certificate
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-updates-on-your-submissions-booked-accounts.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Updates on Your Accounts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="line-of-credit-functionality.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Line of Credit Functionality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sandbox-integration-and-testing.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandbox Integration and Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="submitting-an-application.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submitting an Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-creating-a-certificate-authority-ca-cert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Creating a Certificate Authority (CA) Cert
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-packaging-the-certificate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Packaging the Certificate
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>To access the Linear API you will need either a certificate or an API Key.  Which one to use will be dependent on the access granted and resources called. For partners looking to simply submit applications (using the <strong>Prefill App</strong> or <strong>Submit App</strong> endpoint), you can use a certificate or API Key.  We find the majority of partners using just an API Key in these instances.  This will be provided to you by Linear and allows you to submit applications directly to our server from your website.  For all other uses of the API (any line of credit functionality or calls to get customer information), we require certificate authentication.  Additional information on client certificates can be found below.</p>
+<blockquote>
+<p>📘 General Note Regarding Authentication</p>
+<p>If you are using resources to both submit applications and get subsequent customer information (or access line of credit functionality), we recommend using certificate authentication for all calls.</p>
+</blockquote>
+<h1 id="securing-api-endpoints-using-client-certificates">Securing API Endpoints Using Client Certificates</h1>
+<p>A client certificate-based authentication scheme is a robust way of authenticating our partners. Even if a certificate is compromised, without the private key there is no way to misuse it. For APIs that expose customer information, Linear requires a certificate mechanism which is much safer than a password-based mechanism. In this handshake scheme, the request coming to Linear's API endpoint needs to be signed by the client certificate from our partner. </p>
+<h2 id="step-1-creating-a-certificate-authority-ca-cert">Step 1: Creating a Certificate Authority (CA) Cert</h2>
+<p>The first step in this process, assuming you do not already have one, is to generate a root certificate on which you will base your client certificate request. Ideally, you would like to have this certificate from a trusted Certificate Authority like VeriSign, GeoTrust or Entrust, but a self-signed certificate is sufficient for this purpose.  Once created, you'll need to add this to your Trusted Root CA in the machine where the API call will occur from, as this will become your root certificate for the client certificate request.</p>
+<p>Provided below is an example command of a self-signed root certificate with OpenSSL (which works for Linux, Windows, Mac and Android and can be downloaded <strong><a href="https://wiki.openssl.org/index.php/Binaries">here</a></strong>).</p>
+<p>```text Sample Command
+openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out certificate.crt</p>
+<pre><code>
+## Step 2: Client Certificate Signing Request (CSR)
+
+After creating a CA Cert, you'll need to create the client certificate request using the CA Cert  (certificate.crt) created in Step 1.  An example of the command for this client certificate request is provided below:
+
+```text Sample Command
+openssl x509 -x509storeq -in certificate.crt -out CSR.csr -signkey privateKey.key
+</code></pre>
+<p>This command will create both a private and a public key.  The private key should not be shared and kept secure and safe. The .csr file (CSR.csr) from the command above should be sent to Linear. </p>
+<h2 id="step-3-packaging-the-certificate">Step 3: Packaging the Certificate</h2>
+<p>Linear will return a signed certificate along with our root certificate, which will need to be installed on your server(s) being used to make the API calls.  Installing the root and signed certificate to your target environment is best done by packaging them.  The packaged file will be in PFX file (or other applicable file type), for which we have provided an example command below:</p>
+<p>```text Sample Command
+openssl pkcs12 -export -out certificate.pfx -inkey privateKey.key -in certificate.crt -certfile FundationRootCertificate.cr*t</p>
+<pre><code>
+Once the packaged file is created, you can import this into the certificate store using the following command on a Windows machine
+
+```text Sample Command
+CERTUTIL -f -importpfx “certificate.pfx&quot;
+</code></pre>
+<p>Once complete, you can now include your packaged certificate and call our API.  Below is an example using the previously generated PFX file and Postman to call our API.</p>
+<p>[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/b72127a-Postman.png",
+        "Postman.png",
+        715
+      ],
+      "sizing": "smart"
+    }
+  ]
+}
+[/block]</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
