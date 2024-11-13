@@ -55,17 +55,5 @@ CERTUTIL -f -importpfx “certificate.pfx"
 
 Once complete, you can now include your packaged certificate and call our API.  Below is an example using the previously generated PFX file and Postman to call our API.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://voyager.postman.com/logo/postman-logo-icon-orange.svg",
-        "Postman.png",
-        715
-      ],
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
+<br/>
+![Postman] (https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
