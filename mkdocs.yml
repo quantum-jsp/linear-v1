@@ -3,7 +3,7 @@ site_url: ""
 use_directory_urls: false
 
 nav:
-  - Documenataion:
+  - Documentation:
     - REST API Platform Overview: Documentation/rest-api-platform-overview-alt-1.md
     - Authentication: Documentation/rest-api-platform-overview-alt-1/authentication-validation-1.md
     - Getting Updates on Your Accounts: Documentation/rest-api-platform-overview-alt-1/getting-updates-on-your-submissions-booked-accounts.md
