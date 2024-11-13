@@ -1,0 +1,40 @@
+/* Custom styles for Quantum Fintech theme */
+:root {
+  --md-primary-fg-color: rgb(19, 35, 47);  /* Custom primary color */
+  --md-accent-fg-color: #f56105;          /* Orange accent color */
+  --md-default-fg-color: #212121;         /* Default text color */
+  --md-default-bg-color: #ffffff;         /* Background color */
+}
+
+pre {
+  position: relative;
+}
+
+/* Change the size of the logo in the header */
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+  height: 1.8rem;
+  width: 6rem;
+}
+
+/* Styles for the copy code button */
+.md-clipboard {
+  display: flex;
+  color: #f2b683 !important;            /* White text */
+  border: none;
+  border-radius: 3px;
+  font-size: 0.8em;
+  cursor: pointer;
+  position: absolute;
+  top: 1.8em;
+  right: 1.8em;
+}
+
+.md-clipboard:hover {
+  color: #f56105 !important; /* Darker orange on hover */
+}
+
+/* Increase the size of the copy icon */
+.md-clipboard svg {
+  width: 1em;
+  height: 1em;
+}
