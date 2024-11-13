@@ -60,7 +60,7 @@ Once complete, you can now include your packaged certificate and call our API.  
   "images": [
     {
       "image": [
-        "https://files.readme.io/b72127a-Postman.png",
+        "https://voyager.postman.com/logo/postman-logo-icon-orange.svg",
         "Postman.png",
         715
       ],
