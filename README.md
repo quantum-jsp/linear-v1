@@ -1,6 +1,10 @@
 > [!WARNING]
->This Repo is $${\color{red}Public}$$ and contains the linear API as html, plus the MD files from Amount <BR/>
+> This Repo has a branch for github pages (gh-pages) that is $${\color{red}Public}$$ and contains the linear API as html.
+> The main branch includes the MKDocs source files <BR/>
 
-- index.html in the root contains the openapi spec as html <BR/>
-- docs contains the Markdown files <BR/>
-- site contains the HTML generated site
+When edits are commited to main the site gets updated. <BR/>
+
+The site is located at: <BR/>
+- https://camino-financial.github.io/linear-v1/linear-api-v1-schema.html
+- https://camino-financial.github.io/linear-v1/
+
