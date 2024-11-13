@@ -10,6 +10,7 @@ nav:
     - Line of Credit Functionality: Documentation/rest-api-platform-overview-alt-1/line-of-credit-functionality.md
     - Sandbox Integration and Testing: Documentation/rest-api-platform-overview-alt-1/sandbox-integration-and-testing.md
     - Submitting an Application: Documentation/rest-api-platform-overview-alt-1/submitting-an-application.md
+  - Schema Explorer: /linear-v1/linear-api-v1-schema.html
 theme: material
 plugins: []
 
