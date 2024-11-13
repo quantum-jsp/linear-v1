@@ -15,7 +15,7 @@ The most common use of Linear's API suite is submitting an application for credi
 
 | Endpoint                             |
 | :----------------------------------- |
-| **[Submit App](ref:ideaapi_submit)** |
+| **[Submit App]([ref:ideaapi_submit](https://quantum-jsp.github.io/linear-v1/#tag/Applications/operation/IdeaApi_Submit))** |
 
 The **Submit App** endpoint submits a full application (request for credit) on behalf of the customer.  For the function to work successfully, all _required_ fields must be present when the endpoint is called.  This call will initiate Linear's automated credit strategy and will return an instant decision.  Calling this endpoint is ideal in situations where you have all the required fields on-hand or are willing to capture the supplemental data points we need, over and above what you customarily have available on your customer.  If that isn't possible we suggest using our **Prefill App** endpoint.
 
