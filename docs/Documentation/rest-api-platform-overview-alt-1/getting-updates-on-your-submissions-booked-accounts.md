@@ -15,7 +15,7 @@ We understand the importance of staying up to date on the key details of your ap
 
 | Endpoint                                       |
 | :--------------------------------------------- |
-| **[Account List](/linear-v1/linear-api-v1-schema.html#tag//Accounts/operation/IdeaApi_GetAccountList)** |
+| **[Account List](/linear-v1/linear-api-v1-schema.html#tag/Accounts/operation/IdeaApi_GetAccountList)** |
 
 Calling the **Account List** endpoint will return a list of all Accounts we have received from you.  The responses received from this call will contain key, high-level, details on each Account.  You can control the number of Account records returned by passing in additional parameters like date, product type, status, etc.
 
