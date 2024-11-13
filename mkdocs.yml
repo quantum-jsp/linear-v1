@@ -12,10 +12,21 @@ nav:
     - Submitting an Application: Documentation/rest-api-platform-overview-alt-1/submitting-an-application.md
   - Schema Explorer: /linear-v1/linear-api-v1-schema.html
   
-theme: material
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.svg
   icon:
     repo: fontawesome/brands/github
     logo: material/language-python
+  palette:
+    - scheme: default
+      primary: 'custom'
+      accent: 'orange'
+
+  features:
+    - content.code.copy
     
 markdown_extensions:
   - codehilite:
