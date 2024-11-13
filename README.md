@@ -5,6 +5,5 @@
 When edits are commited to main branch, the site gets updated. <BR/>
 
 The site is located at: <BR/>
-- https://camino-financial.github.io/linear-v1/linear-api-v1-schema.html
 - https://camino-financial.github.io/linear-v1/
 
