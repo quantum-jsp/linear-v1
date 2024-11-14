@@ -1,5 +1,5 @@
 site_name: Developer Docs - Linear 1.0 API
-site_url: ""
+site_url: "https://camino-financial.github.io/linear-v1/"
 use_directory_urls: false
 
 nav:
