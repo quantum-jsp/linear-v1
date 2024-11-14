@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://camino-financial.github.io/linear-v1/index.html</loc>
+         <lastmod>2024-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://camino-financial.github.io/linear-v1/Documentation/getting-startedd.html</loc>
+         <lastmod>2024-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://camino-financial.github.io/linear-v1/Documentation/rest-api-platform-overview-alt-1.html</loc>
+         <lastmod>2024-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://camino-financial.github.io/linear-v1/Documentation/rest-api-platform-overview-alt-1/authentication-validation-1.html</loc>
+         <lastmod>2024-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://camino-financial.github.io/linear-v1/Documentation/rest-api-platform-overview-alt-1/getting-updates-on-your-submissions-booked-accounts.html</loc>
+         <lastmod>2024-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://camino-financial.github.io/linear-v1/Documentation/rest-api-platform-overview-alt-1/line-of-credit-functionality.html</loc>
+         <lastmod>2024-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://camino-financial.github.io/linear-v1/Documentation/rest-api-platform-overview-alt-1/sandbox-integration-and-testing.html</loc>
+         <lastmod>2024-11-14</lastmod>
+    </url>
+    <url>
+         <loc>https://camino-financial.github.io/linear-v1/Documentation/rest-api-platform-overview-alt-1/submitting-an-application.html</loc>
+         <lastmod>2024-11-14</lastmod>
+    </url>
+</urlset>
