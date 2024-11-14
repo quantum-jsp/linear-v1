@@ -15,7 +15,7 @@ The most common use of Linear's API suite is submitting an application for credi
 
 | Endpoint                             |
 | :----------------------------------- |
-| **[Submit App](/linear-v1/linear-api-v1-schema.html#tag/Applications/operation/IdeaApi_Submit)** |
+| **[Submit App][schema-app-submit]** |
 
 The **Submit App** endpoint submits a full application (request for credit) on behalf of the customer.  For the function to work successfully, all _required_ fields must be present when the endpoint is called.  This call will initiate Linear's automated credit strategy and will return an instant decision.  Calling this endpoint is ideal in situations where you have all the required fields on-hand or are willing to capture the supplemental data points we need, over and above what you customarily have available on your customer.  If that isn't possible we suggest using our **Prefill App** endpoint.
 
@@ -23,6 +23,10 @@ The **Submit App** endpoint submits a full application (request for credit) on b
 
 | Endpoint                               |
 | :------------------------------------- |
-| **[Prefill App](/linear-v1/linear-api-v1-schema.html#tag/Applications/operation/IdeaApi_Prefill)** |
+| **[Prefill App][schema-app-prefill]** |
 
 If you don't have all the fields we require to use the Submit App endpoint, chances are the **Prefill App** endpoint should do the trick.  Unlike Submit App, this endpoint does not submit an application on behalf of a customer.  Instead, this call will return a secure link that you can use to redirect the customer to an application site (hosted by Linear) that will pre-fill the data points you have supplied us with, only asking the customer for the supplemental data points we need to submit the application.  The only required fields to initiate this call are _Legal Business Name_ and _Customer Email Address_.
+
+
+[schema-app-prefill]: /linear-v1/linear-api-v1-schema.html#tag/Applications/operation/IdeaApi_Prefill
+[schema-app-submit]: /linear-v1/linear-api-v1-schema.html#tag/Applications/operation/IdeaApi_Submit
