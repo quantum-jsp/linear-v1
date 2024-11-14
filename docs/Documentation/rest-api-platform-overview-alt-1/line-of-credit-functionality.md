@@ -41,6 +41,9 @@ The **Draw List** endpoint provides functionality similar to that of the **Accou
 
 | Endpoint                                 |
 | :--------------------------------------- |
-| **[Draw Info](ref:ideaapi_getdrawinfo)** |
+| **[Draw Info][schema-draw-info]** |
 
 Just like using the **Account Info** endpoint provides you with the ability to take a deeper dive into an individual account, using the **Draw Info** endpoint allows for a more in-depth view of an individual Draw.
+
+
+[schema-draw-info]: /linear-v1/linear-api-v1-schema.html#tag/Draws/operation/IdeaApi_GetDrawInfo
