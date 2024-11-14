@@ -15,7 +15,7 @@ Depending on the type of partnership you have with Linear, your clients may have
 
 | Endpoint                                  |
 | :---------------------------------------- |
-| **[Submit Draw](ref:ideaapi_submitdraw)** |
+| **[Submit Draw][schema-submit-draw]** |
 
 Depending on the nature of your relationship with us, Linear can allow customers to initiate draws directly from your platform. Using the Submit Draw endpoint, a draw can be securely triggered to Linear. Combining this resource with the ones identified in **[Getting Updates on Your Accounts](doc:getting-updates-on-your-submissions-booked-accounts)** can provide a full suite of services to allow your customers to see available balances and manage their Line of Credit product all within your platform.
 
@@ -47,3 +47,4 @@ Just like using the **Account Info** endpoint provides you with the ability to t
 
 
 [schema-draw-info]: /linear-v1/linear-api-v1-schema.html#tag/Draws/operation/IdeaApi_GetDrawInfo
+[schema-submit-draw]: /linear-v1/linear-api-v1-schema.html#tag/Accounts/operation/IdeaApi_SubmitDraw
