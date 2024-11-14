@@ -25,7 +25,7 @@ The first step in this process, assuming you do not already have one, is to gene
 
 Provided below is an example command of a self-signed root certificate with OpenSSL (which works for Linux, Windows, Mac and Android and can be downloaded **[here](https://wiki.openssl.org/index.php/Binaries)**).
 
-```text Sample Command
+```
 openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out certificate.crt
 ```
 
@@ -33,7 +33,7 @@ openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.k
 
 After creating a CA Cert, you'll need to create the client certificate request using the CA Cert  (certificate.crt) created in Step 1.  An example of the command for this client certificate request is provided below:
 
-```text Sample Command
+```
 openssl x509 -x509storeq -in certificate.crt -out CSR.csr -signkey privateKey.key
 ```
 
@@ -43,13 +43,13 @@ This command will create both a private and a public key.  The private key shoul
 
 Linear will return a signed certificate along with our root certificate, which will need to be installed on your server(s) being used to make the API calls.  Installing the root and signed certificate to your target environment is best done by packaging them.  The packaged file will be in PFX file (or other applicable file type), for which we have provided an example command below:
 
-```text Sample Command
+```
 openssl pkcs12 -export -out certificate.pfx -inkey privateKey.key -in certificate.crt -certfile FundationRootCertificate.cr*t
 ```
 
 Once the packaged file is created, you can import this into the certificate store using the following command on a Windows machine
 
-```text Sample Command
+```
 CERTUTIL -f -importpfx “certificate.pfx"
 ```
 
